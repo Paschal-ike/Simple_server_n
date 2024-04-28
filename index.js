@@ -3,25 +3,22 @@ const fs = require('fs');
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/users/signup") {
+  if (req.method === "POST" && req.url === "/users/signup") {
     let body = "";
     req.on("data", chunk => {
       body += chunk.toString();
     });
     req.on("end", () => {
       const newUser = JSON.parse(body);
-
       let users = [];
-      const usersFilePath = path.join(__dirname, 'db', 'users.json'); // Adjusted file path
+      const usersFilePath = path.join(__dirname, 'db', 'users.json');
       if (fs.existsSync(usersFilePath)) {
         const usersData = fs.readFileSync(usersFilePath, "utf8");
         users = JSON.parse(usersData);
       }
-
+  
       users.push(newUser);
-
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-
       res.writeHead(201, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(users));
     });
