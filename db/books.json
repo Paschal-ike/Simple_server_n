@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925
+  },
+  {
+    "id": 2,
+    "title": "Half of a Yellow Sun",
+    "author": "Chimamanda Ngozi Adichie",
+    "year": 2006
+  },
+  {
+    "id": 3,
+    "title": "The Fishermen",
+    "author": "Chigozie Obioma",
+    "year": 2015
+  },
+  {
+    "id": 4,
+    "title": "Half of a Yellow Sun",
+    "author": "Chimamanda Ngozi Adichie",
+    "year": 2006
+  },
+  {
+    "id": 5,
+    "title": "The Fishermen",
+    "author": "Chigozie Obioma",
+    "year": 2015
+  }
+]
